@@ -4,16 +4,20 @@ import PropTypes from "prop-types";
 
 function DailyChores(props) {
   const dashDiv = {
-    padding: "15px",
+    padding: "10px",
     backgroundColor: "blue",
-    borderRadius: "5px",
-    margin: "10px"
+    borderRadius: "5px"
   };
       
   return ( 
     <div style={dashDiv} className="col-sm-6">
-      <p>{props.dailyChores}</p>
-    </div>
+      <h3>Daily Chores</h3>
+      <ul>
+        {props.dailyChores.map((chore, i) => {
+          return <li key={i}>{chore}</li>;
+        })}
+      </ul>
+      </div>
   );
 }
 
