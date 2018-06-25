@@ -1,17 +1,17 @@
-Setup
-npm install, npm start
-Don’t use this readme to figure out what code to type
-Use all other projects we have done as code examples
+<!-- Setup -->
+<!-- npm install, npm start -->
+<!-- Don’t use this readme to figure out what code to type -->
+<!-- Use all other projects we have done as code examples -->
 Pick a real life thing to use as a model. Vehicle, Product, Movie …etc
 Implement 5 properties for this model.
 Make sure if you are on a windows machine you remove the single quotes from package.json
 
 
-Client
-Client code goes in client/src
+<!-- Client -->
+<!-- Client code goes in client/src -->
 
 
-React
+<!-- React -->
 Create a function component that list out a collection of your models (ListOfUsers)
 Use prop types to define what props the component needs
 It should probably need a prop named after the plural of your model, and it should probably be an array
@@ -34,7 +34,7 @@ componentDidMount, call loadThings
 
 
 
-React Router
+<!-- React Router -->
 Import necessary components from react-router-dom into App.js
 Make sure to wrap everything in BrowserRouter
 Create a route to show the list container
@@ -44,7 +44,7 @@ Make sure to wrap all routes in Switch
 Create links to the list and create routes, put them anywhere in App.js outside of the Switch.
 
 
-Redux
+<!-- Redux -->
 * The only state you need is an array of your models
     * state.js
 * Create actions for loading your models and models loaded
@@ -67,18 +67,18 @@ Redux
 
 
 
-Server - use advanced-express-practice as an example
+<!-- Server - use advanced-express-practice as an example -->
 The code for this goes in the /server folder
-Use express to create a server listening on port 3001
-Use mongoose to connect to a MongoDB database called “checkpoint2”
-Create a Model for your thing
-Create a Route and Controller for your thing
+<!-- Use express to create a server listening on port 3001 -->
+<!-- Use mongoose to connect to a MongoDB database called “checkpoint2” -->
+<!-- Create a Model for your thing -->
+<!-- Create a Route and Controller for your thing -->
 In the Route, create routes for getting all things, getting one thing by id, deleting one thing, updating one thing, and creating one thing
 In the Controller, create functions for list,show,create,update,remove
 
 
 
-Points
+<!-- Points -->
 When I yarn start, the web page loads with no errors - 10pts
 I can navigate to the list and create screen from links - 10pts
 I can enter information into the create screen and click save. If I go back to the list screen, that new information is there. - 20pts
@@ -88,7 +88,7 @@ If I click the delete button on the list, the item I clicked will be removed fro
 
 
 
-Extra Credit
+<!-- Extra Credit -->
 Edit Component
 Create a component to edit your things. It will be almost the same as the create component.
 Use a prop that has the array of your models
@@ -106,5 +106,5 @@ In the list components,add a Link for the edit route.
 
 
 
-Bonus
+<!-- Bonus -->
 Create the edit component by reusing the create component
