@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { BrowswerRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
-import DailyChores from "./containers/DailyChoresContainer";
-import WeeklyChores from "./containers/WeeklyChoresContainer";
+import Main from "./components/Main";
+import DailyChoresContainer from "./containers/DailyChoresContainer";
+import WeeklyChoresContainer from "./containers/WeeklyChoresContainer";
 
 
 class App extends Component {
@@ -21,17 +21,15 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
-        <Header />
-        <div id="page-wrapper">
-          <div className="container">
-            <div className="row">
-              <DailyChores />
-              <WeeklyChores />
-            </div>
-          </div>
+      <BrowserRouter>
+        <div>       
+          <Switch>
+            <Route path="/dailyChore/:id" component={DailyChoresContainer} />
+            <Route path="/weeklyChore/:id" component={WeeklyChoresContainer} />
+            <Route path="/" component={Main} />
+          </Switch>
         </div>
-      </div>
+      </BrowserRouter>
     );
   }
 }
