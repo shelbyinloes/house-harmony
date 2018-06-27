@@ -4,9 +4,8 @@ const app = express();
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
-mongoose.set("debug", true);
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb+srv://hharmony:acafinal@final-project-gaat4.mongodb.net/test?retryWrites=true");
+mongoose.connect("mongodb://hharmony:acafinal1@ds249818.mlab.com:49818/house-harmony");
 
 const dailyChoreRoutes = require("./routes/dailyChoreRoutes");
 const weeklyChoreRoutes = require("./routes/weeklyChoreRoutes");
@@ -14,7 +13,7 @@ const weeklyChoreRoutes = require("./routes/weeklyChoreRoutes");
 app.use(dailyChoreRoutes);
 app.use(weeklyChoreRoutes);
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3101;
 app.listen(port, () => {
   console.log(`Listening on port:${port}`);
 });

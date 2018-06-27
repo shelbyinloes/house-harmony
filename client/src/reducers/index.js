@@ -7,6 +7,13 @@ function dailyChores(state = [], action) {
   return state;
 }
 
+function dailyChore(state = [], action) {
+  if (action.type === "GET_DAILY_CHORE_DONE") {
+    return action.value;
+  }
+  return state;
+}
+
 function weeklyChores(state = [], action) { 
   if (action.type === "WEEKLY_CHORES_FETCHED") {
     return action.value;
@@ -14,8 +21,14 @@ function weeklyChores(state = [], action) {
   return state;
 }
 
+function weeklyChore(state = [], action) {
+  if (action.type === "GET_WEEKLY_CHORE_DONE") {
+    return action.value;
+  }
+  return state;
+}
 
 const rootReducer = combineReducers({
-  dailyChores, weeklyChores
+  dailyChores, weeklyChores, dailyChore, weeklyChore
 });
 export default rootReducer;

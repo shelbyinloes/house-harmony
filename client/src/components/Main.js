@@ -1,8 +1,9 @@
 import React from "react";
 import "../App.css";
 import Header from "./Header";
-import DailyChores from "../containers/DailyChoresContainer";
-import WeeklyChores from "../containers/WeeklyChoresContainer";
+import DailyChoresContainer from "../containers/DailyChoresContainer";
+import WeeklyChoresContainer from "../containers/WeeklyChoresContainer";
+import CreateChoresContainer from "../containers/CreateChoresContainer";
 
 
 function Main() {
@@ -12,9 +13,10 @@ function Main() {
       <div id="page-wrapper">
         <div className="container">
           <div className="row">
-            <DailyChores />
-            <WeeklyChores />
+            <DailyChoresContainer />
+            <WeeklyChoresContainer />
           </div>
+          <CreateChoresContainer />
         </div>
       </div>
     </div>

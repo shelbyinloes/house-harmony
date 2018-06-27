@@ -25,7 +25,7 @@ class CreateChores extends React.Component {
           }}>
             <div>
               Chore: <input onChange={(e) => {
-                const dailyChore = {body: e.target.value};
+                const dailyChore = {chore: e.target.value};
                 this.setState({
                   chore: Object.assign(this.state.dailyChore,dailyChore)
                 });

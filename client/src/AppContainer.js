@@ -1,17 +1,17 @@
 import App from "./App";
 import "./App.css";
 import { connect } from "react-redux";
-import { fetchDailyChores, fetchWeeklyChores } from "./actions";
+import { loadDailyChores, loadWeeklyChores } from "./actions";
 
 function mapDispatchToProps(dispatch) {
   return {
-    getDailyChores() {
-      const action = fetchDailyChores();
+    loadDailyChores() {
+      const action = loadDailyChores();
       dispatch(action);
     }, 
 
-    getWeeklyChores() {
-      const action = fetchWeeklyChores();
+    loadWeeklyChores() {
+      const action = loadWeeklyChores();
       dispatch(action);
     }
   };

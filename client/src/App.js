@@ -24,8 +24,8 @@ class App extends Component {
       <BrowserRouter>
         <div>       
           <Switch>
-            <Route path="/dailyChore/:id" component={DailyChoresContainer} />
-            <Route path="/weeklyChore/:id" component={WeeklyChoresContainer} />
+            <Route path="/dailyChores" component={DailyChoresContainer} />
+            <Route path="/weeklyChores" component={WeeklyChoresContainer} />
             <Route path="/" component={Main} />
           </Switch>
         </div>
