@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 
 function dailyChores(state = [], action) { 
-  if (action.type === "DAILY_CHORES_FETCHED") {
+  if (action.type === "DAILY_CHORES_LOADED") {
     return action.value;
   }
   return state;
@@ -15,7 +15,7 @@ function dailyChore(state = [], action) {
 }
 
 function weeklyChores(state = [], action) { 
-  if (action.type === "WEEKLY_CHORES_FETCHED") {
+  if (action.type === "WEEKLY_CHORES_LOADED") {
     return action.value;
   }
   return state;

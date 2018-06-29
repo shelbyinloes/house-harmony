@@ -7,11 +7,11 @@ import {
 
 function mapDispatchToProps(dispatch) {
   return {
-    createDailyChore: function (day) {
-      dispatch(createDailyChore(day));
+    createDailyChore: function (chore) {
+      dispatch(createDailyChore(chore));
     },
-    createWeeklyChore: function (week) {
-      dispatch(createWeeklyChore(week));
+    createWeeklyChore: function (chore) {
+      dispatch(createWeeklyChore(chore));
     }
   };
 }

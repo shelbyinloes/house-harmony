@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Main from "./components/Main";
@@ -15,17 +15,19 @@ class App extends Component {
       weeklyChores: []
     };
   }
+  
   componentDidMount() {
-    this.props.getDailyChores();
-    this.props.getWeeklyChores();
+    this.props.loadDailyChores();
+    this.props.loadWeeklyChores();
   }
+
   render() {
     return (
       <BrowserRouter>
         <div>       
           <Switch>
-            <Route path="/dailyChores" component={DailyChoresContainer} />
-            <Route path="/weeklyChores" component={WeeklyChoresContainer} />
+            <Route path="/dailyChore/:id" component={DailyChoresContainer} />
+            <Route path="/weeklyChore/:id" component={WeeklyChoresContainer} />
             <Route path="/" component={Main} />
           </Switch>
         </div>
@@ -34,9 +36,9 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
-  getDailyChores: PropTypes.string,
-  getWeeklyChores: PropTypes.string
-};
+// App.propTypes = {
+//   loadDailyChores: PropTypes.string,
+//   loadWeeklyChores: PropTypes.string
+// };
 
 export default (App);

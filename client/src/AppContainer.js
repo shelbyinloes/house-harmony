@@ -6,13 +6,11 @@ import { loadDailyChores, loadWeeklyChores } from "./actions";
 function mapDispatchToProps(dispatch) {
   return {
     loadDailyChores() {
-      const action = loadDailyChores();
-      dispatch(action);
+      dispatch(loadDailyChores());
     }, 
 
     loadWeeklyChores() {
-      const action = loadWeeklyChores();
-      dispatch(action);
+      dispatch(loadWeeklyChores());
     }
   };
 }

@@ -50,7 +50,7 @@ function DailyChores(props) {
   return (
     <div>
       <h2>D Chore</h2>
-      <CollapsableMapper data={props.dailyChores} path="comment" field="body" />
+      <CollapsableMapper data={props.dailyChores} path="chore" field="body" />
     </div>
   );
 }

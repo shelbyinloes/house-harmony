@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-class Comment extends Component {
+class DailyChore extends Component {
   componentDidMount() {
-    let id = this.props.match.params.id;
+    const id = this.props.match.params.id;
     this.props.loadDailyChore(id);
   }
 
@@ -15,4 +15,6 @@ class Comment extends Component {
   }
 }
 
-export default Comment;
+export default DailyChore;
+
+//  naming this correct?
