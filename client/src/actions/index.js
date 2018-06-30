@@ -1,6 +1,6 @@
 export function loadDailyChores() {
   return function (dispatch) {
-    fetch("https://localhost:3101/dailyChores")
+    fetch("https://localhost:3001/dailyChores")
         .then( (response) => {
           return response.json();
         }).then((dailyChores) => {
@@ -25,9 +25,9 @@ function dailyChoreLoaded(dailyChore) {
 
 export function loadDailyChore(id) {
   return function (dispatch) {
-    fetch(`https://localhost:3101/dailyChore/${id}`)
-    .then( (res) => {
-      return res.json();
+    fetch(`https://localhost:3001/dailyChore/${id}`)
+    .then( (response) => {
+      return response.json();
     }).then( (dailyChore) => {
       dispatch(dailyChoreLoaded(dailyChore));
     });
@@ -36,7 +36,7 @@ export function loadDailyChore(id) {
 
 export function createDailyChore(c) {
   return function (dispatch) {
-    fetch("https://localhost:3101/dailyChores", {
+    fetch("https://localhost:3001/dailyChores", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(c)
@@ -48,7 +48,7 @@ export function createDailyChore(c) {
 //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //
 export function loadWeeklyChores() {
   return function (dispatch) {
-    fetch("https://localhost:3101/weeklyChores")
+    fetch("https://localhost:3001/weeklyChores")
         .then( (response) => {
           return response.json();
         }).then((weeklyChores) => {
@@ -73,9 +73,9 @@ function weeklyChoreLoaded(weeklyChore) {
 
 export function loadWeeklyChore(id) {
   return function (dispatch) {
-    fetch(`https://localhost:3101/weeklyChore/${id}`)
-    .then( (res) => {
-      return res.json();
+    fetch(`https://localhost:3001/weeklyChore/${id}`)
+    .then( (response) => {
+      return response.json();
     }).then( (weeklyChore) => {
       dispatch(weeklyChoreLoaded(weeklyChore));
     });
@@ -84,7 +84,7 @@ export function loadWeeklyChore(id) {
 
 export function createWeeklyChore(c) {
   return function (dispatch) {
-    fetch("https://localhost:3101/weeklyChores", {
+    fetch("https://localhost:3001/weeklyChores", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(c)
