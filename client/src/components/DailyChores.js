@@ -49,8 +49,8 @@ import CollapsableMapper from "./CollapsableMapper";
 function DailyChores(props) {
   return (
     <div>
-      <h2>D Chore</h2>
-      <CollapsableMapper data={props.dailyChores} path="chore" field="body" />
+      <h2>Daily Chore List</h2>
+      <CollapsableMapper data={props.dailyChores} path="chore" field="chore" />
     </div>
   );
 }

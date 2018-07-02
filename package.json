@@ -55,5 +55,5 @@
     "redux-thunk": "^2.3.0",
     "whatwg-fetch": "^2.0.3"
   },
-  "proxy": "http://localhost:3101"
+  "proxy": "http://localhost:3201"
 }

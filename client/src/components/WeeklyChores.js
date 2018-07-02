@@ -1,3 +1,17 @@
+import React from "react";
+import CollapsableMapper from "./CollapsableMapper";
+
+function DailyChores(props) {
+  return (
+    <div>
+      <h2>Weekly Chore List</h2>
+      <CollapsableMapper data={props.weeklyChores} path="chore" field="chore" />
+    </div>
+  );
+}
+export default DailyChores;
+
+
 // import React from "react";
 // import PropTypes from "prop-types";
 // // import { connect } from "react-redux";
@@ -28,15 +42,3 @@
 
 // export default WeeklyChores;
 
-import React from "react";
-import CollapsableMapper from "./CollapsableMapper";
-
-function DailyChores(props) {
-  return (
-    <div>
-      <h2>W Chore</h2>
-      <CollapsableMapper data={props.weeklyChores} path="chore" field="body" />
-    </div>
-  );
-}
-export default DailyChores;
