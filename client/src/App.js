@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Main from "./components/Main";
@@ -36,9 +36,9 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
-  loadDailyChores: PropTypes.string,
-  loadWeeklyChores: PropTypes.string
-};
+// App.propTypes = {
+//   loadDailyChores: PropTypes.string,
+//   loadWeeklyChores: PropTypes.string
+// };
 
 export default (App);
