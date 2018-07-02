@@ -1,6 +1,6 @@
 export function loadDailyChores() {
   return function (dispatch) {
-    fetch("https://localhost:3001/dailyChores")
+    fetch("/dailyChores")
         .then( (response) => {
           return response.json();
         }).then((dailyChores) => {
@@ -25,7 +25,7 @@ function dailyChoreLoaded(dailyChore) {
 
 export function loadDailyChore(id) {
   return function (dispatch) {
-    fetch(`https://localhost:3001/dailyChore/${id}`)
+    fetch(`/dailyChore/${id}`)
     .then( (response) => {
       return response.json();
     }).then( (dailyChore) => {
@@ -36,7 +36,7 @@ export function loadDailyChore(id) {
 
 export function createDailyChore(c) {
   return function (dispatch) {
-    fetch("https://localhost:3001/dailyChores", {
+    fetch("/dailyChores", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(c)
@@ -48,7 +48,7 @@ export function createDailyChore(c) {
 //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //
 export function loadWeeklyChores() {
   return function (dispatch) {
-    fetch("https://localhost:3001/weeklyChores")
+    fetch("/weeklyChores")
         .then( (response) => {
           return response.json();
         }).then((weeklyChores) => {
@@ -73,7 +73,7 @@ function weeklyChoreLoaded(weeklyChore) {
 
 export function loadWeeklyChore(id) {
   return function (dispatch) {
-    fetch(`https://localhost:3001/weeklyChore/${id}`)
+    fetch(`/weeklyChore/${id}`)
     .then( (response) => {
       return response.json();
     }).then( (weeklyChore) => {
@@ -84,7 +84,7 @@ export function loadWeeklyChore(id) {
 
 export function createWeeklyChore(c) {
   return function (dispatch) {
-    fetch("https://localhost:3001/weeklyChores", {
+    fetch("/weeklyChores", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(c)
