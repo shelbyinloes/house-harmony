@@ -5,7 +5,7 @@ function WeeklyChores(props) {
   return (
     <div>
       <h2>Weekly Chore List</h2>
-      <CollapsableMapper data={props.weeklyChores} path="chore" field="chore" />
+      <CollapsableMapper data={props.weeklyChores} path="weeklyChore" field="chore" />
     </div>
   );
 }

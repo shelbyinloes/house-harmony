@@ -4,7 +4,7 @@ import { loadDailyChore } from "../actions/index";
 
 const mapStateToProps = (state) => ({dailyChore: state.dailyChore});
 const mapDispatchToProps = (dispatch) => ({
-  loadDailyChore: (id) => {dispatch(loadDailyChore(id))}
+  loadDailyChore: (id) => dispatch(loadDailyChore(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DailyChore);
