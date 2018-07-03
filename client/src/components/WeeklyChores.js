@@ -1,7 +1,7 @@
 import React from "react";
 import CollapsableMapper from "./CollapsableMapper";
 
-function DailyChores(props) {
+function WeeklyChores(props) {
   return (
     <div>
       <h2>Weekly Chore List</h2>
@@ -9,7 +9,8 @@ function DailyChores(props) {
     </div>
   );
 }
-export default DailyChores;
+
+export default WeeklyChores;
 
 
 // import React from "react";

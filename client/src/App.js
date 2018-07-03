@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-// import PropTypes from "prop-types";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Main from "./components/Main";
-import DailyChoresContainer from "./containers/DailyChoresContainer";
-import WeeklyChoresContainer from "./containers/WeeklyChoresContainer";
+import DailyChoreContainer from "./containers/DailyChoreContainer";
+import WeeklyChoreContainer from "./containers/WeeklyChoreContainer";
 
 
 class App extends Component {
@@ -26,8 +25,8 @@ class App extends Component {
       <BrowserRouter>
         <div>       
           <Switch>
-            <Route path="/dailyChore/:id" component={DailyChoresContainer} />
-            <Route path="/weeklyChore/:id" component={WeeklyChoresContainer} />
+            <Route path="/dailyChore/:id" component={DailyChoreContainer} />
+            <Route path="/weeklyChore/:id" component={WeeklyChoreContainer} />
             <Route path="/" component={Main} />
           </Switch>
         </div>
@@ -35,10 +34,5 @@ class App extends Component {
     );
   }
 }
-
-// App.propTypes = {
-//   loadDailyChores: PropTypes.string,
-//   loadWeeklyChores: PropTypes.string
-// };
 
 export default (App);

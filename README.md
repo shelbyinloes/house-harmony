@@ -4,7 +4,7 @@
 <!-- Use all other projects we have done as code examples -->
 Pick a real life thing to use as a model. Vehicle, Product, Movie …etc
 Implement 5 properties for this model.
-Make sure if you are on a windows machine you remove the single quotes from package.json
+<!-- Make sure if you are on a windows machine you remove the single quotes from package.json -->
 
 
 <!-- Client -->
