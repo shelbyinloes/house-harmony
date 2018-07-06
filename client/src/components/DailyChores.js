@@ -45,12 +45,14 @@
 
 import React from "react";
 import CollapsableMapper from "./CollapsableMapper";
+import {ProgressBar} from "react-bootstrap";
 
 function DailyChores(props) {
   return (
-    <div>
+    <div className="col-sm-6">
       <h2>Daily Chore List</h2>
       <CollapsableMapper data={props.dailyChores} path="dailyChore" field="chore" />
+      <ProgressBar now={60} />
     </div>
   );
 }

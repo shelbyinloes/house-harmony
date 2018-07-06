@@ -3,7 +3,7 @@ import CollapsableMapper from "./CollapsableMapper";
 
 function WeeklyChores(props) {
   return (
-    <div>
+    <div className="col-sm-6">
       <h2>Weekly Chore List</h2>
       <CollapsableMapper data={props.weeklyChores} path="weeklyChore" field="chore" />
     </div>
