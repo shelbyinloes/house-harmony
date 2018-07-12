@@ -16,7 +16,7 @@ class CreateChores extends React.Component {
     return (
       <div>
         <div className="col-sm-6">
-          <h1>Daily Chores</h1>
+          <h3>Add to Daily Chores</h3>
           <form onSubmit={(e) => {
             e.preventDefault();
             if (this.props.createDailyChore) {
@@ -35,7 +35,7 @@ class CreateChores extends React.Component {
           </form>
         </div>
         <div className="col-sm-6">
-          <h1>Weekly Chores</h1>
+          <h3>Add to Weekly Chores</h3>
           <form onSubmit={(e) => {
             e.preventDefault();
             if (this.props.createWeeklyChore) {

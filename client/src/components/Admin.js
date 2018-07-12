@@ -18,14 +18,13 @@ class Admin extends Component {
 
   render() {
     const tabStyle = {
-      backgroundColor: "pink", 
       padding: "10px"
     };
     return (
       <div style={tabStyle}>
         <h2>Daily Chore Admin</h2>
         {/* <CreateChoresContainer /> */}
-        <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
+        <Tabs defaultActiveKey={1}>
           <Tab eventKey={1} title="Kid 1">
             <CollapsableMapper data={this.props.dailyChores} path="dailyChore" field="chore" />
             <CollapsableMapper data={this.props.weeklyChores} path="weeklyChore" field="chore" />
