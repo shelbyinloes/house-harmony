@@ -27,7 +27,7 @@ class CollapsableMapper extends Component {
       userDivs = "";
     }
     return (
-      <div>
+      <div className="col-sm-6">
         <button onClick={() => {
           this.setState({
             visible: !this.state.visible

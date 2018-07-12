@@ -15,7 +15,7 @@ class CreateChores extends React.Component {
   render() {
     return (
       <div>
-        <div>
+        <div className="col-sm-6">
           <h1>Daily Chores</h1>
           <form onSubmit={(e) => {
             e.preventDefault();
@@ -34,7 +34,7 @@ class CreateChores extends React.Component {
             <button>Create</button> 
           </form>
         </div>
-        <div>
+        <div className="col-sm-6">
           <h1>Weekly Chores</h1>
           <form onSubmit={(e) => {
             e.preventDefault();

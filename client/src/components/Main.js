@@ -17,10 +17,10 @@ function Main() {
             <AdminContainer />
           </div>
           <div className="row">
-            <DailyChoresContainer />
-            <WeeklyChoresContainer />
+            {/* <DailyChoresContainer />
+            <WeeklyChoresContainer /> */}
           </div>
-          <CreateChoresContainer />
+          {/* <CreateChoresContainer /> */}
         </div>
       </div>
     </div>
