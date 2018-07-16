@@ -12,6 +12,9 @@ class Admin extends Component {
       },
       weeklyChore: {
         chore: ""
+      },
+      tabs: {
+        tabName: ["Charlie", "Becca", "Jackson"]
       }
     };
   }
@@ -25,17 +28,17 @@ class Admin extends Component {
         <h2>Daily Chore Admin</h2>
         {/* <CreateChoresContainer /> */}
         <Tabs defaultActiveKey={1}>
-          <Tab eventKey={1} title="Kid 1">
+          <Tab eventKey={1} title={this.state.tabs.tabName[0]}>
             <CollapsableMapper data={this.props.dailyChores} path="dailyChore" field="chore" />
             <CollapsableMapper data={this.props.weeklyChores} path="weeklyChore" field="chore" />
             <CreateChoresContainer />
           </Tab>
-          <Tab eventKey={2} title="Kid 2">
+          <Tab eventKey={2} title={this.state.tabs.tabName[1]}>
             <CollapsableMapper data={this.props.dailyChores} path="dailyChore" field="chore" />
             <CollapsableMapper data={this.props.weeklyChores} path="weeklyChore" field="chore" />
             <CreateChoresContainer />
           </Tab>
-          <Tab eventKey={3} title="Kid 3">
+          <Tab eventKey={3} title={this.state.tabs.tabName[2]}>
             <CollapsableMapper data={this.props.dailyChores} path="dailyChore" field="chore" />
             <CollapsableMapper data={this.props.weeklyChores} path="weeklyChore" field="chore" />
             <CreateChoresContainer />
