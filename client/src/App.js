@@ -35,4 +35,8 @@ class App extends Component {
   }
 }
 
+// App.propTypes = {
+//   name: PropTypes.string
+// };
+
 export default (App);

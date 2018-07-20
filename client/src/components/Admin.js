@@ -7,16 +7,23 @@ class Admin extends Component {
   constructor() {
     super();
     this.state = {
-      dailyChore: {
-        chore: ""
-      },
-      weeklyChore: {
-        chore: ""
-      },
-      tabs: {
-        tabName: ["Charlie", "Becca", "Jackson"]
-      }
+      tabs: ["Charlie", "Becca", "Jackson"],
+      input: ""
     };
+  }
+
+  formSubmit = (e) => {
+    e.preventDefault();
+    this.state.tabs.push(this.state.input);
+    this.setState({
+      ...this.state
+    });
+  }
+
+  updateInput = (e) => {
+    this.setState({
+      input: e.target.value
+    });
   }
 
   render() {
@@ -26,8 +33,29 @@ class Admin extends Component {
     return (
       <div style={tabStyle}>
         <h2>Daily Chore Admin</h2>
-        {/* <CreateChoresContainer /> */}
         <Tabs defaultActiveKey={1}>
+
+          {this.state.tabs.map((item, index) =>
+            <Tab eventKey={{index}} title={item} key={this.state.tabs + index}>
+              <CollapsableMapper data={this.props.dailyChores} path="dailyChore" field="chore" />
+              <CollapsableMapper data={this.props.weeklyChores} path="weeklyChore" field="chore" />
+              <CreateChoresContainer />
+            </Tab>
+          )}
+       {/* tab div here '+' */}
+        </Tabs>
+        
+        <form onSubmit={this.formSubmit}>
+          <input type="text" onChange={this.updateInput} />
+          <button type="submit">Submit</button>
+        </form>
+
+        <CollapsableMapper data={this.props.dailyChores} path="dailyChore" field="chore" />
+
+
+
+        {/* <CreateChoresContainer /> */}
+        {/* <Tabs defaultActiveKey={1}>
           <Tab eventKey={1} title={this.state.tabs.tabName[0]}>
             <CollapsableMapper data={this.props.dailyChores} path="dailyChore" field="chore" />
             <CollapsableMapper data={this.props.weeklyChores} path="weeklyChore" field="chore" />
@@ -43,7 +71,7 @@ class Admin extends Component {
             <CollapsableMapper data={this.props.weeklyChores} path="weeklyChore" field="chore" />
             <CreateChoresContainer />
           </Tab>
-        </Tabs>
+        </Tabs> */}
       </div>
     );
   }
