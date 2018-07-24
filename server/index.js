@@ -11,9 +11,11 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 // app.use(express.static('public'));
 
+const ChoreRoutes = require("./routes/ChoreRoutes");
 const dailyChoreRoutes = require("./routes/DailyChoreRoutes");
 const weeklyChoreRoutes = require("./routes/WeeklyChoreRoutes");
 
+app.use(ChoreRoutes);
 app.use(dailyChoreRoutes);
 app.use(weeklyChoreRoutes);
 
