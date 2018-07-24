@@ -1,5 +1,19 @@
 import { combineReducers } from "redux";
 
+function Chores(state = [], action) { 
+  if (action.type === "CHORES_LOADED") {
+    return action.value;
+  }
+  return state;
+}
+
+function Chore(state = [], action) {
+  if (action.type === "CHORE_DONE") {
+    return action.value;
+  }
+  return state;
+}
+
 function dailyChores(state = [], action) { 
   if (action.type === "DAILY_CHORES_LOADED") {
     return action.value;
@@ -29,6 +43,6 @@ function weeklyChore(state = [], action) {
 }
 
 const rootReducer = combineReducers({
-  dailyChores, weeklyChores, dailyChore, weeklyChore
+  Chores, Chore, dailyChores, weeklyChores, dailyChore, weeklyChore
 });
 export default rootReducer;
