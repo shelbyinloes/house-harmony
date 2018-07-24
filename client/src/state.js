@@ -2,5 +2,7 @@ export default {
   weeklyChores: [],
   dailyChores: [],
   weeklyChore: {},
-  dailyChore: {}
+  dailyChore: {},
+  chores: [],
+  chore: {}
 };
