@@ -3,6 +3,8 @@ import CollapsableMapper from "./CollapsableMapper";
 import CreateChoresContainer from "../containers/CreateChoresContainer";
 import {Tabs, Tab} from "react-bootstrap";
 
+  //  NOT FINISHED
+
 class Admin2 extends Component {
   constructor() {
     super();

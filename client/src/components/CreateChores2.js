@@ -11,6 +11,8 @@ class CreateChores extends React.Component {
       }
     };
   }
+
+  //  NOT FINISHED
   render() {
     return (
       <div>
