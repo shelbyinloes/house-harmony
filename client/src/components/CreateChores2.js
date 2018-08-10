@@ -26,9 +26,9 @@ class CreateChores extends React.Component {
           }}>
             <div>
               Task: <input onChange={(e) => {
-                const chore = {chore: e.target.value};
+                const chore = {task: e.target.value};
                 this.setState({
-                  chore: Object.assign(this.state.chore,chore)
+                  task: Object.assign(this.state.chore.task,chore.task)
                 });
               }} />
             </div>
@@ -36,7 +36,7 @@ class CreateChores extends React.Component {
               Due On: <input onChange={(e) => {
                 const chore = {time: e.target.value};
                 this.setState({
-                  chore: Object.assign(this.state.chore,chore)
+                  time: Object.assign(this.state.chore.time,chore.time)
                 });
               }} />
             </div>

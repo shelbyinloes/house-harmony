@@ -1,93 +1,93 @@
-export function loadDailyChores() {
+export function loadChores() {
   return function (dispatch) {
-    fetch("/dailyChores")
+    fetch("/chores")
         .then( (response) => {
           return response.json();
-        }).then((dailyChores) => {
-          dispatch(dailyChoresLoaded(dailyChores));
+        }).then((chores) => {
+          dispatch(choresLoaded(chores));
         });
   };
 }
 
-export function dailyChoresLoaded(dailyChores) {
+export function choresLoaded(chores) {
   return {
-    type: "DAILY_CHORES_LOADED",
-    value: dailyChores
+    type: "CHORES_LOADED",
+    value: chores.task
   };
 }
 
-function dailyChoreLoaded(dailyChore) {
+function choreLoaded(chore) {
   return {
-    type: "GET_DAILY_CHORE_DONE",
-    value: dailyChore
+    type: "GET_CHORE_DONE",
+    value: chore
   };
 }
 
 export function loadDailyChore(id) {
   return function (dispatch) {
-    fetch(`/dailyChore/${id}`)
+    fetch(`/chore/${id}`)
     .then( (response) => {
       return response.json();
-    }).then( (dailyChore) => {
-      dispatch(dailyChoreLoaded(dailyChore));
+    }).then( (chore) => {
+      dispatch(choreLoaded(chore));
     });
   };
 }
 
-export function createDailyChore(c) {
+export function createChore(c) {
   return function (dispatch) {
-    fetch("/dailyChores", {
+    fetch("/chores", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(c)
-    }).then(() => dispatch(loadDailyChores()));
+    }).then(() => dispatch(loadChores()));
   };
 }
 
 
-//  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //
-export function loadWeeklyChores() {
-  return function (dispatch) {
-    fetch("/weeklyChores")
-        .then( (response) => {
-          return response.json();
-        }).then((weeklyChores) => {
-          dispatch(weeklyChoresLoaded(weeklyChores));
-        });
-  };
-}
+//  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //  //
+// export function loadWeeklyChores() {
+//   return function (dispatch) {
+//     fetch("/weeklyChores")
+//         .then( (response) => {
+//           return response.json();
+//         }).then((weeklyChores) => {
+//           dispatch(weeklyChoresLoaded(weeklyChores));
+//         });
+//   };
+// }
 
-export function weeklyChoresLoaded(weeklyChores) {
-  return {
-    type: "WEEKLY_CHORES_LOADED",
-    value: weeklyChores
-  };
-}
+// export function weeklyChoresLoaded(weeklyChores) {
+//   return {
+//     type: "WEEKLY_CHORES_LOADED",
+//     value: weeklyChores
+//   };
+// }
 
-function weeklyChoreLoaded(weeklyChore) {
-  return {
-    type: "GET_WEEKLY_CHORE_DONE",
-    value: weeklyChore
-  };
-}
+// function weeklyChoreLoaded(weeklyChore) {
+//   return {
+//     type: "GET_WEEKLY_CHORE_DONE",
+//     value: weeklyChore
+//   };
+// }
 
-export function loadWeeklyChore(id) {
-  return function (dispatch) {
-    fetch(`/weeklyChore/${id}`)
-    .then( (response) => {
-      return response.json();
-    }).then( (weeklyChore) => {
-      dispatch(weeklyChoreLoaded(weeklyChore));
-    });
-  };
-}
+// export function loadWeeklyChore(id) {
+//   return function (dispatch) {
+//     fetch(`/weeklyChore/${id}`)
+//     .then( (response) => {
+//       return response.json();
+//     }).then( (weeklyChore) => {
+//       dispatch(weeklyChoreLoaded(weeklyChore));
+//     });
+//   };
+// }
 
-export function createWeeklyChore(c) {
-  return function (dispatch) {
-    fetch("/weeklyChores", {
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify(c)
-    }).then(() => dispatch(loadWeeklyChores()));
-  };
-}
+// export function createWeeklyChore(c) {
+//   return function (dispatch) {
+//     fetch("/weeklyChores", {
+//       method: "POST",
+//       headers: {"Content-Type": "application/json"},
+//       body: JSON.stringify(c)
+//     }).then(() => dispatch(loadWeeklyChores()));
+//   };
+// }

@@ -4,7 +4,7 @@ import Header from "./Header";
 // import DailyChoresContainer from "../containers/DailyChoresContainer";
 // import WeeklyChoresContainer from "../containers/WeeklyChoresContainer";
 // import CreateChoresContainer from "../containers/CreateChoresContainer";
-import AdminContainer from "../containers/AdminContainer";
+// import AdminContainer from "../containers/AdminContainer";
 import AdminContainer2 from "../containers/AdminContainer2";
 
 
@@ -15,7 +15,7 @@ function Main() {
       <div id="page-wrapper">
         <div className="container">
           <div className="row">
-            <AdminContainer />
+            {/* <AdminContainer /> */}
           </div>
           <div className="row">
             <AdminContainer2 />
